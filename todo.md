@@ -3,17 +3,17 @@
 ## Tasks
 
 - [x] Clarify requirements with user
-- [ ] Create GitHub repository "LLM-Conversation"
-- [ ] Create frontend application
-  - [ ] Set up HTML structure for chat interface
-  - [ ] Create CSS styles for chat interface
-  - [ ] Implement JavaScript for handling conversations
-  - [ ] Add functionality to display conversation history
-- [ ] Develop AWS Lambda backend
-  - [ ] Set up Python Lambda function
-  - [ ] Implement OpenAI API integration
-  - [ ] Create proxy functionality for API requests
-  - [ ] Ensure easy migration path to other LLM providers
+- [x] Create GitHub repository "LLM-Conversation"
+- [x] Create frontend application
+  - [x] Set up HTML structure for chat interface
+  - [x] Create CSS styles for chat interface
+  - [x] Implement JavaScript for handling conversations
+  - [x] Add functionality to display conversation history
+- [x] Develop AWS Lambda backend
+  - [x] Set up Python Lambda function
+  - [x] Implement OpenAI API integration
+  - [x] Create proxy functionality for API requests
+  - [x] Ensure easy migration path to other LLM providers
 - [ ] Integrate frontend with backend
   - [ ] Connect frontend to Lambda endpoint
   - [ ] Test end-to-end functionality

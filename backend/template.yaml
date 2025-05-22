@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: LLM Conversation Lambda Function
+
+Resources:
+  LLMConversationFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./
+      Handler: lambda_function.handler
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+      MemorySize: 256
+      Timeout: 30
+      Environment:
+        Variables:
+          OPENAI_API_KEY: !Ref OpenAIApiKey
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /chat
+            Method: post
+        OptionsEvent:
+          Type: Api
+          Properties:
+            Path: /chat
+            Method: options
+
+Parameters:
+  OpenAIApiKey:
+    Type: String
+    Description: Your OpenAI API Key
+    NoEcho: true
+
+Outputs:
+  LLMConversationFunction:
+    Description: LLM Conversation Lambda Function ARN
+    Value: !GetAtt LLMConversationFunction.Arn
+  LLMConversationApi:
+    Description: API Gateway endpoint URL for Prod stage
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/chat"
