@@ -14,8 +14,8 @@
   - [x] Implement OpenAI API integration
   - [x] Create proxy functionality for API requests
   - [x] Ensure easy migration path to other LLM providers
-- [ ] Integrate frontend with backend
-  - [ ] Connect frontend to Lambda endpoint
-  - [ ] Test end-to-end functionality
+- [x] Integrate frontend with backend
+  - [x] Connect frontend to Lambda endpoint
+  - [x] Test end-to-end functionality
 - [ ] Validate application functionality
 - [ ] Report and send access details to user
