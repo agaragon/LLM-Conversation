@@ -176,8 +176,8 @@ async function sendToBackend(message) {
             messages: conversationHistory
         };
         
-        // Replace with your actual Lambda function URL when deployed
-        const lambdaUrl = 'https://your-lambda-function-url.amazonaws.com';
+        // Lambda function URL
+        const lambdaUrl = 'https://bdoez5u93k.execute-api.us-east-1.amazonaws.com/prod/chat';
         
         const response = await fetch(lambdaUrl, {
             method: 'POST',
