@@ -1,6 +1,6 @@
 # Node modules
 node_modules/
-
+lambda_deployment
 # Python virtual environment
 venv/
 __pycache__/
